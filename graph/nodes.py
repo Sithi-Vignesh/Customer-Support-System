@@ -1,3 +1,11 @@
+"""
+nodes.py
+Defines all core LangGraph nodes:
+- classify_intent: Categorizes customer query using LLM
+- memory_node: Handles memory recall queries using SQLite history
+- hitl_node: Checks if human approval is required and requests it
+- supervisor_node: Validates and improves agent responses before final delivery
+"""
 from graph.state import SupportState
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
@@ -5,12 +13,18 @@ import os
 
 load_dotenv()
 
+# Initialize Groq LLM with LLaMA 3.3 70B model
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
     api_key=os.getenv("GROQ_API_KEY")
 )
 
 def classify_intent(state: SupportState) -> dict:
+    """
+    Classifies the customer query into one of five categories:
+    Sales, Technical, Billing, Account, or Memory.
+    Uses a strict LLM prompt to return only the category name.
+    """
     query = state["query"]
     
     prompt = f"""You are an intent classifier for a customer support system.
@@ -34,6 +48,11 @@ Respond with only the category name. Nothing else."""
 
 
 def memory_node(state: SupportState) -> dict:
+    """
+    Handles memory recall queries by fetching conversation history
+    from SQLite and using LLM to generate a context-aware response.
+    Bypasses all agent routing — goes directly to END.
+    """
     from memory.memory_manager import get_conversation_history
     customer_id = state["customer_id"]
     history = get_conversation_history(customer_id)
@@ -54,11 +73,14 @@ Customer question: {state["query"]}"""
 
 
 def hitl_node(state: SupportState) -> dict:
+    """
+    Checks if the customer query requires human approval.
+    If yes, pauses and prompts the supervisor for a decision via terminal input.
+    High-risk requests: refunds, cancellations, account closure, compensation, escalation.
+    """
     from hitl.approval import check_requires_approval, request_human_approval
     
-    agent_response = state.get("agent_response", "")
     query = state["query"]
-    
     requires_approval = check_requires_approval(query)
     
     if requires_approval:
@@ -73,6 +95,11 @@ def hitl_node(state: SupportState) -> dict:
 
 
 def supervisor_node(state: SupportState) -> dict:
+    """
+    Supervisor agent that reviews and improves the specialized agent's draft response.
+    If the request was rejected by HITL, returns a standard rejection message.
+    Otherwise, uses LLM to produce a polished, professional final response.
+    """
     agent_response = state.get("agent_response", "")
     query = state["query"]
     approval_status = state.get("approval_status", "approved")

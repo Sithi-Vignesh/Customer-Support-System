@@ -1,6 +1,15 @@
+"""
+router.py
+Contains conditional edge functions used by LangGraph to route
+the state to the correct next node based on intent or approval status.
+"""
 from graph.state import SupportState
 
 def route_by_intent(state: SupportState) -> str:
+    """
+    Routes the query to the appropriate agent node based on classified intent.
+    Returns the node name as a string for LangGraph conditional edges.
+    """
     intent = state.get("intent", "").strip()
     
     routes = {
@@ -15,11 +24,8 @@ def route_by_intent(state: SupportState) -> str:
 
 
 def route_after_hitl(state: SupportState) -> str:
-    approval_status = state.get("approval_status", "approved")
-    
-    if approval_status in ["approved", "auto_approved"]:
-        return "supervisor_node"
-    elif approval_status == "rejected":
-        return "supervisor_node"
-    else:
-        return "supervisor_node"
+    """
+    Routes to supervisor_node after HITL review regardless of approval outcome.
+    Supervisor handles both approved and rejected responses differently.
+    """
+    return "supervisor_node"
