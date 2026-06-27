@@ -86,7 +86,8 @@ Review and improve the following agent response for professionalism, accuracy, a
 Customer Query: {query}
 Agent Response: {agent_response}
 
-Provide an improved, professional final response. Be concise and helpful."""
+Provide an improved, professional final response. Be concise and helpful.
+Return only one final response. Do not provide alternatives or multiple versions."""
 
     final = llm.invoke(prompt).content.strip()
     return {"final_response": final}
