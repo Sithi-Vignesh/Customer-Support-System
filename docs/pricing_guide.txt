@@ -1,0 +1,13 @@
+ABC Technologies Pricing Guide
+
+ABC Technologies offers flexible subscription plans designed to support businesses of all sizes. Whether you are an individual professional, a growing team, or a large enterprise, our plans provide the tools needed to manage daily operations efficiently while offering scalable resources and reliable customer support.
+
+The Basic Plan is priced at $29 per month and is ideal for freelancers, startups, and small businesses beginning their digital management journey. This plan supports up to 5 users and includes 50 GB of secure cloud storage. Customers receive access to essential business management features, including task management, project tracking, reporting dashboards, document sharing, and standard integrations. Basic Plan subscribers receive Standard Support during regular business hours through email.
+
+The Professional Plan is available for $79 per month and is designed for growing organizations that require advanced collaboration and productivity features. This plan supports up to 25 users and includes 250 GB of cloud storage. In addition to all Basic Plan features, customers gain access to workflow automation, advanced analytics, custom reporting, API access, team collaboration tools, and enhanced security controls. Professional subscribers receive Priority Support with faster response times through both email and live chat.
+
+The Enterprise Plan is offered at $199 per month and is intended for larger organizations with advanced operational requirements. The plan supports up to 100 users and includes 1 TB of secure cloud storage. Enterprise customers receive all Professional Plan features along with advanced administrative controls, single sign-on support, dedicated account management, custom integrations, enhanced compliance features, and enterprise-grade security options. This plan includes Premium Support with priority response, dedicated onboarding assistance, and access to technical specialists.
+
+Customers who choose annual billing receive a 20% discount compared to the standard monthly subscription rates. Annual subscriptions are billed once per year at the discounted rate, providing predictable costs and long-term savings while maintaining uninterrupted access to all subscribed features.
+
+ABC Technologies also offers a free 14-day trial for new customers. The trial includes access to the full feature set of the selected subscription plan without requiring a long-term commitment. At the end of the trial period, customers may choose to subscribe to a paid plan or allow the trial to expire. No permanent data will be removed immediately after trial expiration, allowing a limited period for account activation before standard data retention policies apply.

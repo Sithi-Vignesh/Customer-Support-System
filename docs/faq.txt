@@ -1,0 +1,46 @@
+ABC Technologies SaaS Platform Frequently Asked Questions
+
+Q1: How do I create an account?
+A: Select the Sign Up option, provide your required information, verify your email address, and complete the account setup process.
+
+Q2: I forgot my password. What should I do?
+A: Use the "Forgot Password" option on the login page. A password reset link will be sent to your registered email address.
+
+Q3: How often am I billed?
+A: Customers may choose either monthly or annual billing. Charges are processed automatically at the beginning of each billing cycle.
+
+Q4: Am I eligible for a refund?
+A: Customers may request a refund within seven days of the original purchase, subject to the company's refund policy and applicable terms.
+
+Q5: Can I upgrade my subscription plan?
+A: Yes. You may upgrade your plan at any time through your account settings. New features become available after the upgrade is processed.
+
+Q6: Can I downgrade my subscription?
+A: Yes. Downgrades are available according to your billing cycle and may take effect at the start of the next renewal period.
+
+Q7: Is there a limit on file uploads?
+A: Yes. Upload limits depend on your subscription plan, available storage capacity, and any applicable file size restrictions.
+
+Q8: Which web browsers are supported?
+A: The platform supports the latest versions of Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari for the best experience.
+
+Q9: Does the platform provide API access?
+A: Yes. API access is available on eligible subscription plans and allows secure integration with approved third-party applications.
+
+Q10: Can multiple users share one account?
+A: Individual login credentials should not be shared. Organizations can add multiple authorized users according to the user limit included with their subscription plan.
+
+Q11: How do I invite additional users?
+A: Administrators can invite team members through the user management section by entering their email addresses and assigning appropriate permissions.
+
+Q12: Is my information stored securely?
+A: Yes. Customer data is protected using industry-standard security measures, controlled access, and regular security monitoring.
+
+Q13: What should I do if I experience login or application errors?
+A: Verify your credentials, check your internet connection, clear your browser cache if necessary, and try again using a supported browser before contacting support.
+
+Q14: Can I cancel my subscription?
+A: Yes. Subscription cancellations can be requested according to the company's cancellation policy. Service remains active until the effective cancellation date.
+
+Q15: How do I contact technical support?
+A: Technical support is available through the customer support portal, email, and live chat. When requesting assistance, include your account information, a description of the issue, any error messages, and the troubleshooting steps already completed to help expedite resolution.
